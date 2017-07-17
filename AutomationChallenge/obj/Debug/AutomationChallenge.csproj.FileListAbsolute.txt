@@ -1,0 +1,6 @@
+C:\Upskilling\AutomationChallenge\AutomationChallenge\bin\Debug\AutomationChallenge.dll
+C:\Upskilling\AutomationChallenge\AutomationChallenge\bin\Debug\AutomationChallenge.pdb
+C:\Upskilling\AutomationChallenge\AutomationChallenge\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Upskilling\AutomationChallenge\AutomationChallenge\obj\Debug\AutomationChallenge.csprojResolveAssemblyReference.cache
+C:\Upskilling\AutomationChallenge\AutomationChallenge\obj\Debug\AutomationChallenge.dll
+C:\Upskilling\AutomationChallenge\AutomationChallenge\obj\Debug\AutomationChallenge.pdb
