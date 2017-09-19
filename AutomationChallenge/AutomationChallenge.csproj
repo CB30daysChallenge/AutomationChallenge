@@ -81,13 +81,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Hooks.cs" />
-    <Compile Include="Login.feature.cs">
+    <Compile Include="Features\Todomvc.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Login.feature</DependentUpon>
+      <DependentUpon>Todomvc.feature</DependentUpon>
     </Compile>
-    <Compile Include="LoginToTheWebsiteSteps.cs" />
+    <Compile Include="Helpers\Hooks.cs" />
+    <Compile Include="Stepdefinitions\LoginToTheWebsiteSteps.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -97,12 +97,15 @@
     </None>
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
-    <None Include="Login.feature">
+    <None Include="Features\Todomvc.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Login.feature.cs</LastGenOutput>
+      <LastGenOutput>Todomvc.feature.cs</LastGenOutput>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">
       <SubType>Designer</SubType>

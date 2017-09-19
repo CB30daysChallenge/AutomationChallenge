@@ -10,20 +10,20 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace AutomationChallenge
+namespace AutomationChallenge.Features
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Login to the website", SourceFile="Login.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("Login to the website", SourceFile="Features\\Todomvc.feature", SourceLine=0)]
     public partial class LoginToTheWebsiteFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Login.feature"
+#line 1 "Todomvc.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
@@ -62,19 +62,34 @@ namespace AutomationChallenge
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Login", new string[] {
-                "mytag"}, SourceLine=3)]
+                "login"}, SourceLine=3)]
         public virtual void Login()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login", new string[] {
-                        "mytag"});
+                        "login"});
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
- testRunner.Given("I am on ToDoMvc anjularjs website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on ToDoMvc website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "items"});
+            table1.AddRow(new string[] {
+                        "Create C# project"});
+            table1.AddRow(new string[] {
+                        "Add feature File"});
+            table1.AddRow(new string[] {
+                        "Implement code"});
 #line 6
- testRunner.When("I have entered a task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 7
- testRunner.Then("the entered task should be added to the Todo list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I have entered an Items to the list", ((string)(null)), table1, "When ");
+#line 11
+ testRunner.Then("I should see the radio button infront of the added items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+ testRunner.And("the count before Items left should match with active items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+ testRunner.And("the items left, All, Ative, Completed labels are displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+ testRunner.And("the All label is selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

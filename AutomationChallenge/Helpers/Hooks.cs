@@ -10,18 +10,21 @@ using TechTalk.SpecFlow;
 namespace AutomationChallenge
 {
     [Binding]
-    class Hooks
+    public class Hooks
     {
+        public static IWebDriver driver;
 
-        //IWebDriver driver = new ChromeDriver();
         [BeforeScenario]
         public void SetupBrowser()
         {
-            Console.WriteLine("setting up browser");
-            
-            //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-            //driver.Navigate().GoToUrl("http://todomvc.com/examples/angularjs/#/");
+            driver = new ChromeDriver();
 
+             Console.WriteLine("setting up browser");
+            
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl("http://todomvc.com/examples/angularjs/#/");
+           
         }
         [AfterScenario]
         public void Cleanup()
