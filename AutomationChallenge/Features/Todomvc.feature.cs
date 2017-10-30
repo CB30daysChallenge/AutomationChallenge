@@ -17,7 +17,8 @@ namespace AutomationChallenge.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Login to the website", SourceFile="Features\\Todomvc.feature", SourceLine=0)]
+    [NUnit.Framework.TestFixtureAttribute()]
+    [NUnit.Framework.DescriptionAttribute("Login to the website")]
     public partial class LoginToTheWebsiteFeature
     {
         
@@ -26,7 +27,7 @@ namespace AutomationChallenge.Features
 #line 1 "Todomvc.feature"
 #line hidden
         
-        [TechTalk.SpecRun.FeatureInitialize()]
+        [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
@@ -34,18 +35,19 @@ namespace AutomationChallenge.Features
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [TechTalk.SpecRun.FeatureCleanup()]
+        [NUnit.Framework.OneTimeTearDownAttribute()]
         public virtual void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
+        [NUnit.Framework.SetUpAttribute()]
         public virtual void TestInitialize()
         {
         }
         
-        [TechTalk.SpecRun.ScenarioCleanup()]
+        [NUnit.Framework.TearDownAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -61,16 +63,11 @@ namespace AutomationChallenge.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Login", new string[] {
-                "login"}, SourceLine=3)]
-        public virtual void Login()
+        public virtual void FeatureBackground()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login", new string[] {
-                        "login"});
+#line 3
 #line 4
-this.ScenarioSetup(scenarioInfo);
-#line 5
- testRunner.Given("I am on ToDoMvc website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+testRunner.Given("I am on ToDoMvc website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "items"});
@@ -80,24 +77,45 @@ this.ScenarioSetup(scenarioInfo);
                         "Add feature File"});
             table1.AddRow(new string[] {
                         "Implement code"});
-#line 6
+            table1.AddRow(new string[] {
+                        "Add Exceptions to code"});
+            table1.AddRow(new string[] {
+                        "Implement Jenkins"});
+#line 5
  testRunner.When("I have entered an Items to the list", ((string)(null)), table1, "When ");
-#line 11
- testRunner.Then("I should see the radio button infront of the added items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 12
- testRunner.And("the count before Items left should match with active items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
- testRunner.And("the items left, All, Ative, Completed labels are displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
- testRunner.And("the All label is selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.TestRunCleanup()]
-        public virtual void TestRunCleanup()
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Login")]
+        [NUnit.Framework.CategoryAttribute("login")]
+        public virtual void Login()
         {
-            TechTalk.SpecFlow.TestRunnerManager.GetTestRunner().OnTestRunEnd();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login", new string[] {
+                        "login"});
+#line 14
+this.ScenarioSetup(scenarioInfo);
+#line 3
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "items"});
+            table2.AddRow(new string[] {
+                        "Create C# project"});
+            table2.AddRow(new string[] {
+                        "Add feature File"});
+#line 15
+ testRunner.When("I click on radio button against the below items", ((string)(null)), table2, "When ");
+#line 19
+ testRunner.Then("I should see these items are appeared under completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 20
+ testRunner.And("the count before Items left should match with active items", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 21
+ testRunner.And("the items left, All, Ative, Completed labels are displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
+ testRunner.And("the All label is selected by default", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
         }
     }
 }
